@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Happy Birthday Papa!</title>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Lexend';
+        }
+        
+        body{
+            background-color: lightBlue;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header{
+            width: auto;
+            border-bottom: solid 3px #486980;
+            height: auto;
+            font-size: 40px;
+            text-align: center;
+            color: rgb(72, 105, 128);
+        }
+
+        #carousel-section{
+        }
+
+        #video-section{
+        }
+
+       #note{
+            margin: 40px auto;
+            width: 35%;
+            height: auto;
+            padding: 20px;
+            border: solid 3px #486980;
+            border-radius: 10px;
+            background: #eaf6fb;
+            font-size: 1.2em;
+            color: #486980;
+            font-weight: 500;
+            text-align: center;
+       }
+
+    </style>
+
+
+</head>
+<body>
+
+    <header>Happy 53rd Birthday Papa</header>
+
+    <section id="carousel-section" style="margin: 40px auto; align-items: center; justify-content: center; display: flex; flex-direction: column;">
+        <h2 style="color:#486980; font-size:2em; margin-bottom:20px; font-weight:700; text-align:center; letter-spacing:2px;">Memories</h2>
+        <div style="display: flex; align-items: center; justify-content: center;">
+            <button id="prevBtn" style="font-size:3em; background:none; border:none; cursor:pointer; color: #486980;">&#8592;</button>
+            <img id="carouselImg" src="images/good.png" alt="Birthday Photo" style="width:60%; height:40%; object-fit:cover; border-radius:10px; border:5px solid #486980; margin:0 10px;">
+            <button id="nextBtn" style="font-size:3em; background:none; border:none; cursor:pointer; color: #486980;">&#8594;</button>
+        </div>
+        <div id="carouselLabel" style="margin-top:15px; font-size:1.2em; color:#486980; font-weight:500; min-height:2em; text-align:center;"></div>
+    </section>
+
+    <script>
+        const images = [
+            'images/good.png',
+            'images/image2.png',
+            'images/babyvishwa.png',
+            'images/cruise.png',
+            'images/futuredubai.png',
+            'images/image1.png',
+            'images/image3.png',
+            'images/liberty.png',
+            'images/image4.png',
+            'images/test.png'
+        ];
+        const labels = [
+            'Papa being handsome.',
+            'Papa looking over the Niagara Falls',
+            'Papa with baby Vishwa.',
+            'Mamma and Papa on the cruise.',
+            'Papa in the Museum of the Future in Dubai.',
+            'Deva and Papa at a Miami Heat Game.',
+            'Papa looking at the Niagara Falls.',
+            'Papa and Mamma at the top of the Statue of Liberty.',
+            'Papa at the top of the Burj Khalifa.',
+            'Birthday cake for Papa.'
+        ];
+        let current = 0;
+        const img = document.getElementById('carouselImg');
+        const label = document.getElementById('carouselLabel');
+        function updateCarousel() {
+            img.src = images[current];
+            label.textContent = labels[current];
+        }
+        updateCarousel();
+        document.getElementById('prevBtn').onclick = function() {
+            current = (current - 1 + images.length) % images.length;
+            updateCarousel();
+        };
+        document.getElementById('nextBtn').onclick = function() {
+            current = (current + 1) % images.length;
+            updateCarousel();
+        };
+    </script>
+
+    <section id="video-section" style="margin: 40px auto 0 auto; text-align: center;">
+        <h2 style="color:#486980; font-size:2em; margin-bottom:20px; font-weight:700; text-align:center; letter-spacing:2px;">Special Video</h2>
+        <video id="birthdayVideo" width=60% height=40% controls style="border-radius:10px; max-width: 400px; border:5px solid #486980; background:#eaf6fb;">
+            <source src="images/vishwavideo2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section id="note">
+        <p>
+            Love You Papa 
+            <br>
+            -From Deva
+        </p>
+    </section>
+
+</body>
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
